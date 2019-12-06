@@ -7,9 +7,11 @@ block content
     div.col-md-5
       div.card-body.border
         header.card-header(style='background-color:#563d7c;')
-          h4.card-title.text-center.pt-1 Student Details Entry Form
+          h4.text-white  Student Details Entry Form
+          
 
-          article.card-body
+        article.card-body
+        small.col.text-muted Note that all fields marked with a star (*) are required
         form(method="POST" action="/staffinput" )
           div.form-row
             div.col.form-group
@@ -52,11 +54,11 @@ block content
           div.form-row
             div.col.form-group
               label Student Skills
-              input.form-control( name="studentskills")
-          div.form-row
+              input.form-control( name="studentskills" row="5")
+          
             div.col.form-group
               label Student Projects
-              input.form-control( name="studentprojects")
+              input.form-control( name="studentprojects" row="5")
 
           div.form-row
             div.col.form-group
