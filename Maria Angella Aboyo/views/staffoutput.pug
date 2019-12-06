@@ -1,0 +1,44 @@
+extends layout
+block content
+    header.card-header
+        h4.card-title Student Profile
+        //- b Hello, #{currentUser.staffusername}  
+    |&nbsp
+    div.form-row
+
+
+        div.col.form-group.col-md-3    
+            form(method="post" action='/stafflogout')
+                button.btn.btn-dark.btn-block(type="submit") Log out
+    table.table
+        thead.thead-dark
+            tr
+                th Name
+                th Gender
+                th Age
+                th Country
+                th Place Of Residence
+                th Mobile Phone
+                th Email
+                th Skills
+                th Projects
+
+        tbody
+            each user in users
+                tr
+                    td #{user.studentsurname}
+                    td #{user.studentgender}
+                    td #{user.studentage}
+                    td #{user.studentcountry}
+                    td #{user.studentresidence}
+                    td #{user.studentphone}
+                    td #{user.studentemail}
+                    td #{user.studentskills}
+                    td #{user.studentprojects}
+                    td
+                        form(method="post" action='/staffoutput/print')
+                            input(type="hidden", placeholder="", name="print", value=user._id)
+                            button.btn.btn-dark.btn-block(type="submit") Print
+                        form(method="post" action='/staffoutput/print')
+                            input(type="hidden", placeholder="", name="close", value=user._id)
+                            button.btn.btn-dark.btn-block(type="submit") Close

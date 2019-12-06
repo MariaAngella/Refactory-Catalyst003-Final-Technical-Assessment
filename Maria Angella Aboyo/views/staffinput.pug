@@ -1,0 +1,71 @@
+
+extends layout.pug
+
+block content
+  div.row.justify-content-center
+
+    div.col-md-5
+      div.card-body.border
+        header.card-header(style='background-color:#563d7c;')
+          h4.card-title.text-center.pt-1 Student Details Entry Form
+
+          article.card-body
+        form(method="POST" action="/staffinput" )
+          div.form-row
+            div.col.form-group
+              label Sur name
+              input.form-control( name="studentsurname")
+
+            div.col.form-group
+              label Given name
+              input.form-control( name="studentgivenname")
+
+          div.form-row
+            div.col.form-group
+              label.form-check.form-check-inline
+                input.form-check-input(type="radio" name="studentgender" value="male")
+                span.form-check-label Male
+            div.col.form-group
+              label.form-check.form-check-inline
+                input.form-check-input(type="radio" name="studentgender" value="female")
+                span.form-check-label Female
+          div.form-row
+            div.col.form-group
+              label Student Age
+              input.form-control( name="studentage")
+          div.form-row
+            div.col.form-group
+              label Student Country
+              input.form-control( name="studentcountry")
+          div.form-row
+            div.col.form-group
+              label Student Place of Residence
+              input.form-control( name="studentresidence")
+          div.form-row
+            div.col.form-group
+              label Student Phone
+              input.form-control( name="studentphone")
+          div.form-row
+            div.col.form-group
+              label Student Email
+              input.form-control( name="studentemail")
+          div.form-row
+            div.col.form-group
+              label Student Skills
+              input.form-control( name="studentskills")
+          div.form-row
+            div.col.form-group
+              label Student Projects
+              input.form-control( name="studentprojects")
+
+          div.form-row
+            div.col.form-group
+              button.btn.btn-primary.btn-block(type="submit" style='background-color:#563d7c;') Submit
+
+
+
+
+
+
+
+

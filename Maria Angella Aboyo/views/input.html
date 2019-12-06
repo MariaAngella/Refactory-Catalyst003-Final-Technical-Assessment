@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/custom.css">
+    <script src="validation.js"></script>
+
+
+</head>
+
+<body onload="document.registration.userId.focus();">
+
+    <div class="container mainC" style="padding-top: 5px; background-color:white;">
+
+        <div class="flex regForm">
+
+                <form name="registration" >
+                    <h1 style="text-align: center; background-color:#563d7c; ">Student Details Entry Form</h1><br>
+
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Sur Name : </b></label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" placeholder="username" id="userIdVal"
+                                name="userId">
+                        </div>
+                    </div>
+                   
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Given Name :</b></label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control"  placeholder="name" name="uname" id="allLetters">
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Place of Residence :</b></label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="colFormLabel" placeholder="address" name="address">
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Country :</b></label>
+                        <div class="col-sm-9">
+                            
+                            <select name="country" class="form-control" id="">
+                                <option value="uganda">Uganda</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="tanzania">Tanzania</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Date of Birth :</b></label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="colFormLabel" placeholder="28/02/1990">
+                        </div>
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label"><b>Email Address :</b></label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="colFormLabel" placeholder="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="sex" class="col-sm-3 col-form-label text-center"><b>Gender :</b></label>
+
+                        <div class="col-sm-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" id="Male" value="Male">
+                                <label class="form-check-label" for="Male"> Male </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" id="Female" value="Female">
+                                <label class="form-check-label" for="Female"> Female </label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 validation_error" id="radio_error"></div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="language" class="col-sm-3 col-form-label text-center"><b>Phone Contact :</b></label>
+<div class="form-group row text-center">
+                       <input type="number" class="form-control" id="colFormLabel" placeholder="Phone contact">
+</div>
+                        <div class="col-sm-4 validation_error" id="checkbox_error"></div>
+
+                    </div>
+
+                    <div class="form-group row text-center">
+                        <label for="comment" class="col-sm-3 col-form-label"><b>Skills:</b></label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row text-center">
+                        <label for="comment" class="col-sm-3 col-form-label"><b>Projects:</b></label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="col-sm-12 text-center">
+                            <button type="button" class="btn btn-success" style="background-color:#563d7c;"
+                                onclick="return +formValidation();">Submit</button>
+                        </div>
+                    </div>
+
+
+                </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

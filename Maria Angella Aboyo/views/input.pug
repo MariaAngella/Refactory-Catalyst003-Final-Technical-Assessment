@@ -1,0 +1,80 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Registration form
+  link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='custom.css')
+  script(src='validation.js')
+.container.mainC(style='padding-top: 5px; background-color:white;')
+  .flex.regForm
+    form(name='registration')
+      h1(style='text-align: center; background-color:#563d7c; ') Student Details Entry Form
+      br
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Sur Name : 
+        .col-sm-9
+          input#userIdVal.form-control(type='email' placeholder='username' name='userId')
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Given Name :
+        .col-sm-9
+          input#allLetters.form-control(type='text' placeholder='name' name='uname')
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Place of Residence :
+        .col-sm-9
+          input#colFormLabel.form-control(type='email' placeholder='address' name='address')
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Country :
+        .col-sm-9
+          select.form-control(name='country' id='')
+            option(value='uganda') Uganda
+            option(value='kenya') Kenya
+            option(value='tanzania') Tanzania
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Date of Birth :
+        .col-sm-9
+          input#colFormLabel.form-control(type='email' placeholder='28/02/1990')
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='colFormLabel')
+          b Email Address :
+        .col-sm-9
+          input#colFormLabel.form-control(type='email' placeholder='email')
+      .form-group.row
+        label.col-sm-3.col-form-label.text-center(for='sex')
+          b Gender :
+        .col-sm-9
+          .form-check.form-check-inline
+            input#Male.form-check-input(type='radio' name='sex' value='Male')
+            label.form-check-label(for='Male')  Male 
+          .form-check.form-check-inline
+            input#Female.form-check-input(type='radio' name='sex' value='Female')
+            label.form-check-label(for='Female')  Female 
+        #radio_error.col-sm-4.validation_error
+      .form-group.row
+        label.col-sm-3.col-form-label.text-center(for='language')
+          b Phone Contact :
+        .form-group.row.text-center
+          input#colFormLabel.form-control(type='number' placeholder='Phone contact')
+        #checkbox_error.col-sm-4.validation_error
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='comment')
+          b Skills:
+        .col-sm-9
+          textarea#comment.form-control(rows='5')
+      .form-group.row.text-center
+        label.col-sm-3.col-form-label(for='comment')
+          b Projects:
+        .col-sm-9
+          textarea#comment.form-control(rows='5')
+      .container-fluid
+        .col-sm-12.text-center
+          button.btn.btn-success(type='button' style='background-color:#563d7c;' onclick='return +formValidation();') Submit
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
